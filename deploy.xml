@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<module>
+    <!-- 模块ID -->
+    <id>mk-cms-notify</id>
+    <!-- 模块名 -->
+    <name>消息通知扩展</name>
+    <!-- 模块版本，发布时自动修订 -->
+    <version>.0-SNAPSHOT</version>
+    <!-- 模块描述 -->
+    <description>消息通知扩展</description>
+    <!-- 本模块必须和哪些模块部署在一起 -->
+    <!-- 是否必须出库：true=必选/false=可选/api=API必选 -->
+    <optional>false</optional>
+    <!-- 部署配置 -->
+    <servers>
+        <!-- 当key=app-*时，表示为可拆可和的部署模式 -->
+        <!-- app-server：模块主服务部署时依赖的子项目，默认为模块的core -->
+        <!-- app-client：当依赖本模块的模块与本模块不部署在一起时，需要在对方服务器中部署的子项目，默认为support+client -->
+        <!-- app-gateway：当不存在统一网关服务的时候，需要在所有可拆可合项目中部署的子项目，一般用于sso -->
+        <server>
+            <key>app-server</key>
+            <!-- 对应的子项目 -->
+            <!-- 标准命名（api/support/client/core/server），可配可不配 -->
+            <projects>
+                <project>mk-cms-notify-server</project>
+                <project>mk-sys-notify-server</project>
+                <project>mk-sys-formula-server</project>
+                <project>mk-tic-base-client</project>
+                <project>mk-tic-base-support</project>
+            </projects>
+        </server>
+        <server>
+            <key>app-client</key>
+            <projects>
+                <project>mk-cms-notify-client</project>
+            </projects>
+        </server>
+    </servers>
+</module>

@@ -1,0 +1,6 @@
+/logs/
+/.idea/
+/mk-cms-notify-api/target/
+/mk-cms-notify-client/target/
+/mk-cms-notify-core/target/
+/mk-cms-notify-server/target/
