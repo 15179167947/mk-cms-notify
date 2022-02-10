@@ -35,7 +35,7 @@ public enum MessageStatus implements IEnum<String> {
     @Getter
     private String messageKey;
 
-
+//1312
     public static class Converter extends IEnum.Converter<String, MessageStatus> {
 
     }
